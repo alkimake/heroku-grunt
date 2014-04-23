@@ -4,13 +4,10 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     jshint: {
-      lint: ['app.js', 'Gruntfile.js'],
-      options: {
-        jshintrc: '.jshintrc'
-      }
+      lint: ['server.js', 'Gruntfile.js'],
+      options: {}
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.registerTask('heroku', ['jshint']);
+  grunt.registerTask('build', ['jshint']);
 };
